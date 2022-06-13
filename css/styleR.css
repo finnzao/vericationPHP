@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    height: 70vh;
+}
+
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 80%;
+    border-radius: 10px;
+    padding: 50px;
+    border: 2px solid black;
+}
+
+.box h2 {
+    margin-bottom: 20px;
+}
+
+.field {
+    margin: 10px 0px;
+}
+
+.field input {
+    height: 34px;
+}
+
+
+
+.res_but {
+    width: 40%;
+    height: 41px;
+    border-radius: 10px;
+}
+
+.field button:hover {
+    cursor: pointer;
+}
+
+a {
+    width: 100%;
+    color: black;
+    text-decoration: none;
+}
+
+.field_b {
+    display: flex;
+    justify-content: space-around;
+}
+
+.screen button {
+    border-radius: 4px;
+}
