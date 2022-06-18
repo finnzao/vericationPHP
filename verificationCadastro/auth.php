@@ -7,6 +7,7 @@ $password = $_POST['senha'];
 
 if (empty($user) || empty($password)) {
     header('Location:index.php');
+    $_SESSION['not_authorized'] = true;
     exit();
 }
 
@@ -29,3 +30,28 @@ if ($row == 1) {
     header('Location:index.php');
     exit();
 }
+?>
+
+<?php
+include("conexao.php");
+$user = $_POST['usuario'] = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS);
+$password = $_POST['senha'];
+
+$usuario = mysqli_real_escape_string($conexao, $user);
+$senha = mysqli_real_escape_string($conexao, $password);
+
+$query = "select id,usuarios from users where usuarios = '{$usuarios} and senhas =md5('{$senha}')";
+
+$result = mysqli_query($conexao, $query);
+
+$row = mysqli_num_rows($result);
+
+if ($row == 1) {
+    $_SESSION['usuario'] = $usuario;
+    header('Location:home.php');
+} else {
+    $_SESSION['not_authorized'] = true;
+    header('Location:index.php');
+    exit();
+}
+?>

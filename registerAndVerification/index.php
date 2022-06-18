@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -13,6 +17,16 @@
     <div class="login_screen">
         <div class="login_box">
             <h1>Login</h1>
+            <?php if (isset($_SESSION['not_authorized'])) :
+            ?>
+                <div class="notification is-danger">
+                    <p>ERRO: Usuário ou senha inválidos.</p>
+                </div>
+
+            <?php
+            endif;
+            unset($_SESSION['not_authorized']);
+            ?>
             <form action="auth.php" method="POST">
 
                 <div class="field">

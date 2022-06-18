@@ -1,2 +1,0 @@
-# vericationPHP
-PHP verication date
