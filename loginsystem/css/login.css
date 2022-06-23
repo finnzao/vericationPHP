@@ -1,0 +1,32 @@
+html,
+body {
+  font-family: 'Open Sans', serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.screen-login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to left bottom, #000000, #3b3b3b, #777777, #b9b9b9, #ffffff);
+
+}
+
+.hero.is-success {
+  background: #f2f7fa;
+}
+
+.hero .nav,
+.hero.is-success .nav {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+input {
+  font-weight: 300;
+}
+
+p {
+  font-weight: 700;
+}
